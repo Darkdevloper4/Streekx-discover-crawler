@@ -1,0 +1,22 @@
+{
+  "seed_urls": [
+    "https://mojeek.com",
+    "https://wikipedia.org",
+    "https://news.ycombinator.com",
+    "https://www.bbc.com",
+    "https://pypi.org"
+  ],
+  "max_depth": 3,
+  "max_pages_total": 1000,
+  "max_links_per_page": 20,
+  "max_concurrent_fetches": 3,
+  "delay_per_domain": 1.5,
+  "timeout": 10.0,
+  "user_agent": "StreekxDiscovery/1.0 (Mobile Crawler; Independent Search Engine Project)",
+  "db_path": "data/crawl_db.sqlite",
+  "robots_txt_enabled": true,
+  "save_images_metadata": true,
+  "ranking_weight_links": 0.1,
+  "extract_json_ld": true
+}
+
