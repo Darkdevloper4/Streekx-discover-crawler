@@ -2,6 +2,31 @@ import json
 import threading
 import time
 import logging
+from flask import Flask
+from threading import Thread
+import os
+
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Streekx Discovery Backend is RUNNING 24/7! 🚀"
+
+def run():
+  # Port 8080 Replit ke liye standard hai
+  app.run(host='0.0.0.0', port=8080)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+
+# Aapke existing crawler logic se pehle ise call karein
+if __name__ == "__main__":
+    print("Initializing 24/7 Heartbeat...")
+    keep_alive()
+    # Yahan aapka crawler start karne ka code aayega
+    # example: start_crawler()
+
 from crawler.url_frontier import URLFrontier
 from crawler.fetcher import Fetcher
 from crawler.parser import Parser
